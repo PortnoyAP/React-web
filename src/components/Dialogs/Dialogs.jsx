@@ -1,32 +1,32 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import DialogItem from "./DialogItem";
+import DialogItem from "./DialogItem/DialogItem";
 import styles from "./Dialogs.module.css";
-import MessageItem from "./MessageItem";
+import MessageItem from "./MessageItem/MessageItem";
 
 const Dialogs = props => {
 
-    let dialogs = [
-        {id: 1, name: "Serega"},
-        {id: 2, name: "Alesha"},
-        {id: 3, name: "Misha"},
-        {id: 4, name: "Sveta"},
-        {id: 5, name: "Olesya"}
-    ];
+    // let dialogs = [
+    //     {id: 1, name: "Serega"},
+    //     {id: 2, name: "Alesha"},
+    //     {id: 3, name: "Misha"},
+    //     {id: 4, name: "Sveta"},
+    //     {id: 5, name: "Olesya"}
+    // ];
 
-    let messages = [
-        {id: 1, message: "Hello"},
-        {id: 2, message: "Ashkelon"},
-        {id: 3, message: "Israel"},
-        {id: 4, message: "Yo"},
-        {id: 5, message: "Yo"},
-    ];
+    // let messages = [
+    //     {id: 1, message: "Hello"},
+    //     {id: 2, message: "Ashkelon"},
+    //     {id: 3, message: "Israel"},
+    //     {id: 4, message: "Yo"},
+    //     {id: 5, message: "Yo"},
+    // ];
 
 
-    let dialogsElement = dialogs
+    let dialogsElement = props.dialogs
     .map( dialog => <DialogItem name={dialog.name} id={dialog.id}></DialogItem>);
 
-    let messagesElements = messages
+    let messagesElements = props.messages
     .map( messageEl => <MessageItem message={messageEl.message}></MessageItem>);
 
 
