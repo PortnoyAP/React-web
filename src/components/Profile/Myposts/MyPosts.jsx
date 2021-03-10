@@ -4,11 +4,14 @@ import Post from "./Post/Post";
 
 const MyPosts = (props) => {
 
-    let postsData = [
+    let posts = [
         {id: 1, post: "Hi how are you" , likesCount: 12},
         {id: 2, post: "It's my first post", likesCount: 15 }
 
     ];
+
+    let postsElements = posts
+    .map ( post => <Post message={post.post} counts={post.likesCount}/>)
 
     return(
         <div className={styles.posts}>
@@ -22,9 +25,7 @@ const MyPosts = (props) => {
                 <button>Delete Post</button>
             </div>
             <div >
-                <Post message={postsData[0].post} counts={postsData[0].likesCount}/>
-                <Post message={postsData[1].post} counts={postsData[1].likesCount}/>
-               
+                { postsElements } 
             </div>
         </div>   
     );
