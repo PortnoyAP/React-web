@@ -1,7 +1,12 @@
 .dialog {
-    padding: 20px;
+    padding: 5px;
 
 }
 .dialogsIitems  {
     color: goldenrod;
+}
+.image {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
 }
